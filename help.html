@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>RINmaker</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="../RINmaker/index.php">
+            <img src="img/navicon2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            RINmaker
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../RINmaker/index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../RINmaker/help.html">Help</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <main role="main" class="container w-50 p-3">
+        <br>
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 >RINmaker</h1>
+                            <hr class="mb-5"/>
+                        
+                        </header>
+                        
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p>This web platform has been tested on:</p>
+                            <ul>
+                                <li><strong>Google Chrome</strong> (Windows) 9 0.0.4430.212 - <i>2021-05-10</i></li>
+                                <li><strong>Opera</strong> (Windows) 76.0.4017.123 - <i>2021-05-14</i></li>
+                                <li><strong>Firefox</strong> (Desktop) 88.0.1 - <i>2021-05-05</i></li>
+                            </ul>
+                            <p>On the main page, in the input section, you can choose between uploading a pdb file or inserting its id.</p>
+                            <p>In the options section you can specify the parameters.</p>
+                            <div class="container">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--seq-sep</strong></mark> <em>UINT=3</em></td>
+                                            <td>sequence separation</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--bond-control</strong></mark> <em>TEXT=strict</em></td>
+                                            <td>strict or weak</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--interaction-type</strong></mark> <em>TEXT=all</em></td>
+                                            <td>all, multiple, one</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--net-policy</strong></mark> <em>TEXT=closest</em></td>
+                                            <td>closest, ca or cb</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--h-bond</strong></mark> <em>FLOAT=3.5</em></td>
+                                            <td>maximum distance for h bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--vdw-bond</strong></mark> <em>FLOAT=0.5</em></td>
+                                            <td>maximum distance for vdw bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--ionic-bond</strong></mark> <em>FLOAT=4</em></td>
+                                            <td>maximum distance for ionic bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--generic-bond</strong></mark> <em>FLOAT=6</em></td>
+                                            <td>maximum distance for generic bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--pication-bond</strong></mark> <em>FLOAT=5</em></td>
+                                            <td>maximum distance for pication bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--pipistack-bond</strong></mark> <em>FLOAT=6.5</em></td>
+                                            <td>maximum distance for pipistack bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--h-bond-angle</strong></mark> <em>FLOAT=63</em></td>
+                                            <td>angle for h bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--pication-angle</strong></mark> <em>FLOAT=45</em></td>
+                                            <td>angle for pication bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--pipistack-normal-normal</strong></mark> <em>FLOAT=90</em></td>
+                                            <td>angle range from normal to normal for pipistack bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td><mark><strong>--pipistack-normal-centre</strong></mark> <em>FLOAT=90</em></td>
+                                            <td>angle range from normal to centre for pipistack bonds</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                            <p>For more information on the parameters visit the <a href="../WebRing/about.html">About</a> page.</p>
+                            <p>Once you enter the pdb and the parameters you can choose between 3 options:</p>
+                            <ul>
+                                <li><strong><i>Generate XML</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file that can be downloaded.</li>
+                                <li><strong><i>Show 2D RIN</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file. XML will be parsed and a 2-dimensional graph will be produced representing all types of non-covalent interactions.</li>
+                                <li><strong><i>Show 3D RIN</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file. XML will be parsed and a 3-dimensional graph will be produced representing all types of non-covalent interactions.</li>
+                            </ul>
+                        </section>
+                    </article>
+                </div>
+            </div>
+              
+        </div>
+    </main>
+</body>
+</html>

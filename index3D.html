@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RINmaker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src="https://unpkg.com/force-graph"></script>
+    <script src="https://unpkg.com/3d-force-graph"></script>
+    <script src="https://unpkg.com/d3-force-3d"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="module" src="js/3DRIN.js"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="../RINmaker/index.php">
+            <img src="img/navicon2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            RINmaker
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../RINmaker/index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../RINmaker/help.html">Help</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="container" style="max-width:1200px;">
+        <main role="main" class="container " style="max-width:1200px;"">
+            <br>
+            <div class="jumbotron">
+                <h1 id="pdbname" lass="display-1"></h1>
+            </div>
+
+            <div name="log" id="log"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="rangeslider">
+                        <p><strong>Gravity:</strong></p>
+                        <input
+                        type="range"
+                        min="-200"                    
+                        max="0"                  
+                        step="2"                   
+                        value="-200"                 
+                        id="sliderGravity" 
+                        >
+                        <p>Value: <span id="valueG"></span></p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="rangeslider">
+                        <p><strong>Distance:</strong></p>
+                        <input
+                        type="range"
+                        min="1"                    
+                        max="100"                  
+                        step="2"                   
+                        value="80"                 
+                        id="sliderDistance" 
+                        >
+                        <p>Value: <span id="valueD"></span></p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p><strong>Nodes color:</strong></p>
+                    <div class="input-group">
+                        <select class="form-select" id="nodeColor">
+                            <option selected value="1">Residue</option>
+                            <option value="2">Chain</option>
+                            <option value="3">Degree</option>
+                            <option value="4">Polarity</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p><strong>Links color:</strong></p>
+                    <div class="input-group">
+                        <select class="form-select" id="linkColor">
+                            <option value="1">Uniform</option>
+                            <option selected value="2">Type</option>
+                            <option value="3">Distance</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                <div id="svglink" class="col-sm">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div id="svg" class="col-sm">
+                    
+                </div>
+            </div>
+                </div>
+            </div>
+            
+            <div class="container" id="error"></div>
+
+        	<div class="container"><br>
+            	<div id="graph" class="graph" ></div>
+                <br>
+            </div>
+
+        </main>
+    </div>
+    <br>
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Ca' Foscari University of Venice
+      </div>
+    </footer>
+
+</body>
+
+</html>
