@@ -54,16 +54,28 @@
                         
                         </header>
                         
-                        <!-- Post content-->
+                        <!--content-->
                         <section class="mb-5">
-                            <p>This web platform has been tested on:</p>
+
+                            <p>On this page you will find information regarding the platform only. Technical features will be shown, such as errors, storage systems used and best practices to use the platform properly.</p>
+                            <p>For information about RIN and the Rinmaker project visit the <a href="../WebRing/about.html">About</a> page.
+                            </p>
+                            <br>
+                            <h2>Usage</h2>
+                            <hr class="mb-5"/>
+                            <p>On the <a href="../WebRing/index.html">Home</a> page you can choose between loading a pdb or entering the id.</p>
+                            <p>Once you have chosen the input method, go to the Options section where you can specify the parameters. The parameters must respect some constraints, which you will find in the next section.
+                            </p>
+                            <p>Once you have entered the parameters you can choose between the following three options:</p>
                             <ul>
-                                <li><strong>Google Chrome</strong> (Windows) 9 0.0.4430.212 - <i>2021-05-10</i></li>
-                                <li><strong>Opera</strong> (Windows) 76.0.4017.123 - <i>2021-05-14</i></li>
-                                <li><strong>Firefox</strong> (Desktop) 88.0.1 - <i>2021-05-05</i></li>
+                                <li><strong>Generate XML</strong>, the pdb file will be passed to RINmaker which will produce an xml file that can be downloaded and log information.</li>
+                                <li><strong>Show 2D RIN</strong>, the pdb file will be passed to RINmaker which will produce a 2-dimensional graph representing all types of non-covalent interactions in the PDB.</li>
+                                <li><strong>Show 3D RIN</strong>, the same as the previous point but a 3-dimensional graph will be produced.</li>
                             </ul>
-                            <p>On the main page, in the input section, you can choose between uploading a pdb file or inserting its id.</p>
-                            <p>In the options section you can specify the parameters.</p>
+                            <br>
+                            <h2>Parameters</h2>
+                            <hr class="mb-5"/>
+                            <p>The following are the parameters used by RIN:</p>
                             <div class="container">
                                 <table class="table">
                                     <tbody>
@@ -142,19 +154,30 @@
                                     </tbody>
                                 </table> 
                             </div>
-                            <p>For more information on the parameters visit the <a href="../WebRing/about.html">About</a> page.</p>
-                            <p>Once you enter the pdb and the parameters you can choose between 3 options:</p>
+                            <p>For more information visit the <a href="../WebRing/about.html">About</a> page.</p>
+                            <br>
+                            <h2>Technical information</h2>
+                            <hr class="mb-5"/>
+                            <p>This platform has been tested on:</p>
                             <ul>
-                                <li><strong><i>Generate XML</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file that can be downloaded.</li>
-                                <li><strong><i>Show 2D RIN</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file. XML will be parsed and a 2-dimensional graph will be produced representing all types of non-covalent interactions.</li>
-                                <li><strong><i>Show 3D RIN</i></strong>, the pdb file will be passed to RINmaker which will produce an xml file. XML will be parsed and a 3-dimensional graph will be produced representing all types of non-covalent interactions.</li>
+                                <li><strong>Google Chrome</strong> (Windows) 9 0.0.4430.212 - <i>2021-05-10</i></li>
+                                <li><strong>Opera</strong> (Windows) 76.0.4017.123 - <i>2021-05-14</i></li>
+                                <li><strong>Firefox</strong> (Desktop) 88.0.1 - <i>2021-05-05</i></li>
                             </ul>
+                            <p>In this platform Cookies are used to pass information and parameters to RINmaker and between the various pages.</p>
+                            <p>So, for proper operation, please check that your browser accepts cookies from this domain. In most cases this is not necessary, but this may be the solution if the "Bad Request" error occurs.</p>
+                            <p>Below is an example in Chrome:</p>
+                            <img src="img/cookie.png" class="img-fluid">
                         </section>
                     </article>
                 </div>
-            </div>
-              
+            </div> 
         </div>
     </main>
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Ca' Foscari University of Venice
+        </div>
+    </footer>
 </body>
 </html>

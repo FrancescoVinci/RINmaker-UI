@@ -45,10 +45,10 @@
       </div>
     </nav>
     <br>
-    <main role="main" class="container bg-light text-dark">
+    <main role="main" class="container bg-light text-dark w-75 p-3">
       <div class="jumbotron">
         <br>
-        <img src="img/protein10.png" class="img-fluid" width="700.83" height="297.5">
+        <img src="img/protein6.png" class="img-fluid" width="536" height="219">
         <h1 class="display-6">Ca' Foscari University of Venice</h1>
         <p class="lead"><mark><strong>v0.1.3</strong></mark> 29/03/2021</p>
       </div>
@@ -261,6 +261,8 @@
       </form>
       <br>
     </main>
+    <div id="waiting" class="container">
+    </div>
     <br>
       <?php
         if(isset($_GET['err-send'])){
@@ -328,7 +330,8 @@
           ';
           }
         }
-      ?>  
+      ?> 
+
     <br>
     <div class="container">
       <div class="card">
@@ -336,7 +339,7 @@
           Log: <?php
                 if(isset($_GET['filename'])){
                   $file = $_GET['filename'];
-                  echo substr($file, 0, 8);
+                  echo "<strong>".substr($file, 0, 8)."</strong>";
                 }
               ?>
         </div>
