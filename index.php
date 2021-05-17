@@ -39,7 +39,7 @@
               <a class="nav-link active" aria-current="page" href="../RINmaker/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="../RINmaker/about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../RINmaker/help.html">Help</a>
@@ -54,7 +54,13 @@
         <br>
         <img src="img/protein6.png" class="img-fluid" width="536" height="219">
         <h1 class="display-6">Ca' Foscari University of Venice</h1>
-        <p class="lead"><mark><strong>v0.1.3</strong></mark> 29/03/2021</p>
+
+        <p class="lead">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+            <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+          </svg>
+          <strong>v0.1.3</strong> 29/03/2021
+        </p>
       </div>
       <form id="form1" method="post" enctype=multipart/form-data>
         <div class="container">
@@ -63,7 +69,9 @@
           <hr class="my-4">
           <div class="row">
             <div class="col-sm">
-              <p>Load PDB file</p>
+              <p>
+              Load PDB file
+              </p>
               <div class="input-group mb-3">
                 <input type="file" name="customFile" class="form-control" id="customFile">  
               </div>
