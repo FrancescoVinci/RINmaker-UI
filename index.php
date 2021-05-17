@@ -77,7 +77,7 @@
           <div class="row">
             <div class="col-sm">
 
-              <p><mark>--bond-control</mark></p>
+              <p><mark>Bond Control</mark></p>
               <div class="input-group mb-3">
                 <select id="bond-control" name="bond-control" class="form-select" >
                   <option selected>strict</option>
@@ -88,7 +88,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--interaction-type</mark></p>
+              <p><mark>Interaction Type</mark></p>
               <div class="input-group mb-3">
                 <select id="interaction-type" name="interaction-type" class="form-select">
                   <option selected>all</option>
@@ -100,7 +100,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--net-policy</mark></p>
+              <p><mark>Network Policy</mark></p>
               <div class="input-group mb-3">
                 <select id="net-policy" name="net-policy" class="form-select">
                   <option selected>closest</option>
@@ -115,7 +115,7 @@
           <div class="row">
             <div class="col-sm">
 
-              <p><mark>--seq-sep</mark></p>
+              <p><mark>Sequence Separation</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="seq-sep-checkbox" name="seq-sep-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -126,7 +126,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--h-bond</mark></p>
+              <p><mark>Hydrogen bond</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="h-bond-checkbox" name="h-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -137,7 +137,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--vdw-bond</mark></p>
+              <p><mark>Van Der Waals bond</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="vdw-bond-checkbox" name="vdw-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -151,7 +151,7 @@
           <div class="row">
             <div class="col-sm">
 
-              <p><mark>--ionic-bond</mark></p>
+              <p><mark>Ionic bond</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="ionic-bond-checkbox" name="ionic-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -162,7 +162,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--generic-bond</mark></p>
+              <p><mark>Generic bond</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                 <input id="generic-bond-checkbox" name="generic-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -173,7 +173,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--pication-bond</mark></p>
+              <p><mark>&#960-cation interaction</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="pication-bond-checkbox" name="pication-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -187,7 +187,7 @@
           <div class="row">
             <div class="col-sm">
 
-              <p><mark>--pipistack-bond</mark></p>
+              <p><mark>&#960-&#960 stacking</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="pipistack-bond-checkbox" name="pipistack-bond-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -198,7 +198,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--h-bond-angle</mark></p>
+              <p><mark>Hydrogen bond angle</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="h-bond-angle-checkbox" name="h-bond-angle-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -209,7 +209,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--pication-angle</mark></p>
+              <p><mark>&#960-cation angle</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="pication-angle-checkbox" name="pication-angle-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -223,7 +223,7 @@
           <div class="row">
             <div class="col-sm">
 
-              <p><mark>--pipistack-normal-normal</mark></p>
+              <p><mark>&#960-&#960 stacking-normal-normal</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="pipistack-normal-normal-checkbox" name="pipistack-normal-normal-checkbox" class="form-check-input mt-0" type="checkbox" value="">
@@ -234,7 +234,7 @@
             </div>
             <div class="col-sm">
 
-              <p><mark>--pipistack-normal-centre</mark></p>
+              <p><mark>&#960-&#960 stacking-normal-centre</mark></p>
               <div class="input-group mb-3">
                 <div class="input-group-text">
                   <input id="pipistack-normal-centre-checkbox" name="pipistack-normal-centre-checkbox" class="form-check-input mt-0" type="checkbox" value="">
