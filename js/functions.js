@@ -3,9 +3,20 @@ function redirectXML(){
 	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle() && pdbIdExtension()){
 		form.action='downloadXML.php'; 
 		form.submit();
+		
 		return true;
 	}
 	return false;
+}
+
+function load(){
+	$('#download').hide();
+	$('#loading').html(`
+		<button class="btn btn-primary" type="button" disabled>
+  			<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+			  Loading...
+			</button>
+	`);
 }
 
 function redirect2d(e){
@@ -32,6 +43,19 @@ function redirect3d(e){
 		setCookie('params3D', JSON.stringify(params),1);
 		window.open('index3D.html','_self');
 	}
+}
+
+function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
 
 function setCookie(name,value,days) {

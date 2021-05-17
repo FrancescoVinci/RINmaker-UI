@@ -11,14 +11,18 @@
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>RINmaker</title>
   </head>
 
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/checkForm.js"></script>
+
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
@@ -248,8 +252,10 @@
         <div class="row text-center">
           <input type="hidden" id="upcontent" name="upcontent" value="">
           <div class="col-sm">
-            <input type="submit" name="download" id="download" class="btn btn-primary" value="Generate XML" onclick="redirectXML()"/>
+            <input type="submit" name="download" id="download" class="btn btn-primary" value="Generate XML" onclick=" if(redirectXML())load(); else return false"/>
+            <div id="loading"></div>
           </div>
+
           <div class="col-sm">
             <input type="button" class="btn btn-primary" value="Show 2D RIN" onclick="redirect2d()"/>
           </div>
@@ -261,8 +267,7 @@
       </form>
       <br>
     </main>
-    <div id="waiting" class="container">
-    </div>
+
     <br>
       <?php
         if(isset($_GET['err-send'])){
@@ -333,6 +338,8 @@
       ?> 
 
     <br>
+    <div id="loading">
+    </div>
     <div class="container">
       <div class="card">
         <div class="card-header">
@@ -344,7 +351,7 @@
               ?>
         </div>
         <div class="card-body">
-          
+
           <pre> 
 <?php
 if(isset($_GET['msg-log'])){
