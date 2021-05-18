@@ -64,9 +64,9 @@ function upload(e){
 
 	   var fileReader = new FileReader();
 	  	fileReader.onload = function(fileLoadedEvent){
-	    	var textFromFileLoaded = fileLoadedEvent.target.result;
-	    	localStorage.removeItem('content');
-	     	localStorage.setItem('content',textFromFileLoaded);
+			var textFromFileLoaded = fileLoadedEvent.target.result;
+			localStorage.removeItem('content');
+			localStorage.setItem('content',textFromFileLoaded);
 		};
 
 		fileReader.readAsText(files, "UTF-8");
