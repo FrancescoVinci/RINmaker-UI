@@ -18,11 +18,16 @@ if(params.hasOwnProperty('fromname')){
     delete params.fromcontent;
 }
 
+$(document).ajaxStart(function() {
+    $("#wait").show();
+}).ajaxStop(function() {
+    $("#wait").hide();
+});
+
 $.ajax({
     type: "POST",
     url: url,
     data: params,
-
     async: 'false',
     success: function(res) {
         var log = res.data.log;

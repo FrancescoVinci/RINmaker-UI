@@ -45,6 +45,7 @@ function redirect3d(e){
 	}
 }
 
+
 function setCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -54,7 +55,6 @@ function setCookie(name,value,days) {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
-
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -65,7 +65,6 @@ function getCookie(name) {
     }
     return null;
 }
-
 function eraseCookie(name) {   
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
@@ -81,6 +80,7 @@ function emptyField(){
 
 function isUnsignedInteger(){
 	if(document.getElementById("seq-sep-checkbox").checked) {
+		
 		var strNum = document.getElementById("seq-sep-num").value;
 		var val = 3;
 		var max = 20;
@@ -98,6 +98,8 @@ function isUnsignedInteger(){
     	if(n < val || n > max){
     		alert("Please enter a numeric value in --seq-sep field greater than " + val + " and less than " + max);
     		return false;
+    	}
+    	return true;
 	}else{
 		return true
 	}
@@ -113,6 +115,7 @@ function isNumber(){
 	for(i;i<6;i++){
 
 		if(document.getElementById(checkboxId[i]).checked) {
+			
 			var strNum = document.getElementById(numId[i]).value;
 			strNum = strNum.trim();
 	    	if(!strNum) {

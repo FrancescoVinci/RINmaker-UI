@@ -18,6 +18,12 @@ if(params.hasOwnProperty('fromname')){
     delete params.fromcontent;
 }
 
+$(document).ajaxStart(function() {
+    $("#wait").show();
+}).ajaxStop(function() {
+    $("#wait").hide();
+});
+
 $.ajax({
     type: "POST",
     url: "http://ring.dais.unive.it:8002/api/requestxml/fromname",
