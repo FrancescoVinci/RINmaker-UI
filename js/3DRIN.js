@@ -3,8 +3,8 @@ import { nodesRIN, linksRIN ,parseXmlBonds} from "./Parsing.js";
 var params = JSON.parse(getCookie('params3D'));
 
 var url;
-var urlFromContent = "http://ring.dais.unive.it:8002/api/requestxml/fromcontent";
-var urlFromName = "http://ring.dais.unive.it:8002/api/requestxml/fromname";
+var urlFromContent = "https://ring.dais.unive.it:8002/api/requestxml/fromcontent";
+var urlFromName = "https://ring.dais.unive.it:8002/api/requestxml/fromname";
 
 var divName = document.getElementById('pdbname');
 divName.innerHTML = params.pdbname;
@@ -26,7 +26,7 @@ $(document).ajaxStart(function() {
 
 $.ajax({
     type: "POST",
-    url: "http://ring.dais.unive.it:8002/api/requestxml/fromname",
+    url: "https://ring.dais.unive.it:8002/api/requestxml/fromname",
     data: params,
     async : 'false',
     success : function( res ) {
