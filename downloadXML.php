@@ -83,8 +83,8 @@ if($status['error']){
 	return;
 }
 
-$urlFromName = 'http://ring.dais.unive.it:8002/api/requestxml/fromname';
-$urlFromContent = 'http://ring.dais.unive.it:8002/api/requestxml/fromcontent';
+$urlFromName = 'https://ring.dais.unive.it:8002/api/requestxml/fromname';
+$urlFromContent = 'https://ring.dais.unive.it:8002/api/requestxml/fromcontent';
 
 if($requestFlag === 1){
 	
