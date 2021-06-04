@@ -26,7 +26,7 @@ $(document).ajaxStart(function() {
 
 $.ajax({
     type: "POST",
-    url: "https://ring.dais.unive.it:8002/api/requestxml/fromname",
+    url: url,
     data: params,
     async : 'false',
     success : function( res ) {
