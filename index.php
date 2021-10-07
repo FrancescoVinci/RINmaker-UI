@@ -11,20 +11,26 @@
     
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="style.css">
+
 
     <title>RINmaker</title>
   </head>
 
   <body>
+    
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/checkForm.js"></script>
+    <script type="text/javascript" src="js/browserDetection.js"></script>
 
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7386d5">
       <div class="container">
         <a class="navbar-brand" href="../RINmaker/index.php">
           <img src="img/navicon2.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -49,7 +55,7 @@
       </div>
     </nav>
     <br>
-    <main role="main" class="container bg-light text-dark w-75 p-3">
+    <main role="main" class="container w-75 p-3" style="background-color: #F8F8F8">
       <div class="jumbotron">
         <br>
         <img src="img/protein6.png" class="img-fluid" width="536" height="219">
@@ -116,8 +122,8 @@
               <div class="input-group mb-3">
                 <select id="net-policy" name="net-policy" class="form-select">
                   <option selected>closest</option>
-                  <option>ca</option>
-                  <option>cb</option>
+                  <option>Ca</option>
+                  <option>Cb</option>
                 </select>
               </div>
 
@@ -398,7 +404,7 @@ echo "Bad Request";
     ?>
     <br>
     <footer class="bg-light text-center text-lg-start">
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
         © 2021 Ca' Foscari University of Venice
       </div>
     </footer>

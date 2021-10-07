@@ -1,6 +1,7 @@
+
 function redirectXML(){
 	form=document.getElementById("form1");
-	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle() && pdbIdExtension()){
+	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle()){
 		form.action='downloadXML.php'; 
 		form.submit();
 		
@@ -20,7 +21,7 @@ function load(){
 }
 
 function redirect2d(e){
-	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle() && pdbIdExtension()){
+	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle()){
 		var params = {};
 		if(document.getElementById('customFile').value !== ""){
 			upload(e);
@@ -45,6 +46,20 @@ function redirect3d(e){
 	}
 }
 
+function redirect3dFrom2d(e){
+	var params = getCookie('params2D');
+	eraseCookie('params3D');
+	setCookie('params3D', params, 1);
+	window.open('index3D.html','_self');
+}
+
+function redirect2dFrom3d(e){
+	var params = getCookie('params3D');
+	eraseCookie('params2D');
+	setCookie('params2D', params, 1);
+	window.open('index2D.html','_self');
+}
+
 
 function setCookie(name,value,days) {
     var expires = "";
@@ -55,6 +70,7 @@ function setCookie(name,value,days) {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -65,6 +81,7 @@ function getCookie(name) {
     }
     return null;
 }
+
 function eraseCookie(name) {   
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
@@ -85,21 +102,21 @@ function isUnsignedInteger(){
 		var val = 3;
 		var max = 20;
 		strNum = strNum.trim();
-    	if(!strNum) {
-    		alert("Please enter an unsigned int in --seq-sep field");
-        	return false;
-    	}
-    	strNum = strNum.replace(/^0+/, "") || "0";
-    	var n = Math.floor(Number(strNum));
-    	if(!(String(n) === strNum && n >= 0)){
-    		alert("Please enter an unsigned int in --seq-sep field");
-    		return false;
-    	}
-    	if(n < val || n > max){
-    		alert("Please enter a numeric value in --seq-sep field greater than " + val + " and less than " + max);
-    		return false;
-    	}
-    	return true;
+    		if(!strNum) {
+    			alert("Please enter an unsigned int in --seq-sep field");
+        		return false;
+    		}
+    		strNum = strNum.replace(/^0+/, "") || "0";
+    		var n = Math.floor(Number(strNum));
+    		if(!(String(n) === strNum && n >= 0)){
+    			alert("Please enter an unsigned int in --seq-sep field");
+    			return false;
+    		}
+    		if(n < val || n > max){
+    			alert("Please enter a numeric value in --seq-sep field greater than " + val + " and less than " + max);
+    			return false;
+		}
+		return true;
 	}else{
 		return true
 	}
@@ -161,19 +178,4 @@ function checkAngle(){
 	    }
 	}
 	return true;
-}
-
-function pdbIdExtension(){
-	if(document.getElementById("pdbid").value !== ""){
-		var re = /(?:\.([^.]+))?$/;
-		var name = document.getElementById("pdbid").value;
-		var ext = re.exec(name)[1];
-		if(ext === "pdb"){
-			return true;
-		}else {
-			alert("Please insert a .pdb file or add .pdb extension");
-			return false;
-		}
-	}
-	else return true;
 }

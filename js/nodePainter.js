@@ -73,10 +73,10 @@ function paint_by_degree(degree){
 
 function paint_by_polarity(residue){
     if (['ALA', 'PHE', 'GLY', 'PRO', 'ILE', 'TRP', 'LEU', 'VAL', 'MET'].includes(residue)){
-        return '#b3b3b3'
+        return '#00BFFF'
     }
     else{
-        return '#f2f2f2'
+        return '#808080'
     }
 }
 

@@ -18,7 +18,11 @@ function form(&$status,&$params,&$requestFlag){
 
     if(isset($_POST['download'])){
         if(isset($_POST['pdbid']) && trim($_POST['pdbid']) != ''){
-            $params->pdbname = $_POST['pdbid'];
+	    if(!preg_match('/^.*\.(pdb)$/i', $_POST['pdbid'])){
+	    	$params->pdbname = $_POST['pdbid'] . '.pdb';
+	    }else{
+            	$params->pdbname = $_POST['pdbid'];
+	    }
             $requestFlag = 1;
         }else{
             $requestFlag = 0;
