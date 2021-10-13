@@ -21,7 +21,7 @@ function form(&$status,&$params,&$requestFlag){
 	    if(!preg_match('/^.*\.(pdb)$/i', $_POST['pdbid'])){
 	    	$params->pdbname = $_POST['pdbid'] . '.pdb';
 	    }else{
-            	$params->pdbname = $_POST['pdbid'];
+            $params->pdbname = $_POST['pdbid'];
 	    }
             $requestFlag = 1;
         }else{

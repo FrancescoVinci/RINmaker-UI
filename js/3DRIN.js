@@ -104,7 +104,7 @@ $.ajax({
 
         const gravity = Graph.d3Force('charge'); 
 
-        var displayParmas = document.getElementById("displayParams");
+        var displayParmas = document.getElementById("showhideParams");
         var summaryRegExp= /params summary: {.*?}/g;
         var summary = log.match(summaryRegExp).map(function (s) { return s; });
         console.log(summary)
@@ -164,7 +164,6 @@ $.ajax({
             </g>
         </svg>`;
 
-        
         
         var nodeColor = document.getElementById("nodeColor");
         nodeColor.onchange = function select() {
