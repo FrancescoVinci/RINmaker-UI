@@ -21,7 +21,7 @@ function form(&$status,&$params,&$requestFlag){
 	    if(!preg_match('/^.*\.(pdb)$/i', $_POST['pdbid'])){
 	    	$params->pdbname = $_POST['pdbid'] . '.pdb';
 	    }else{
-            $params->pdbname = $_POST['pdbid'];
+            	$params->pdbname = $_POST['pdbid'];
 	    }
             $requestFlag = 1;
         }else{
@@ -80,7 +80,7 @@ function form(&$status,&$params,&$requestFlag){
 
         #check if --net-policy has been assigned a value
         if(filter_has_var(INPUT_POST, 'net-policy')){
-            $allowedValues = ["closest","ca","cb"];
+            $allowedValues = ["closest","Ca","Cb"];
             if(in_array($_POST['net-policy'], $allowedValues)){
                 $params->net_policy = $_POST['net-policy'];
             }

@@ -47,6 +47,7 @@ $(document).ajaxStart(function() {
     myChart4.update();
 });
 
+
 $.ajax({
     type: "POST",
     url: url,
@@ -98,7 +99,7 @@ $.ajax({
         
         const gravity = Graph.d3Force('charge'); 
 
-        var displayParmas = document.getElementById("showhideParams");
+        var displayParmas = document.getElementById("displayParams");
         var summaryRegExp= /params summary: {.*?}/g;
         var summary = log.match(summaryRegExp).map(function (s) { return s; });
         displayParmas.innerHTML = "<pre style='white-space: pre-wrap;word-wrap: break-word;text-align: justify;'>"+summary+"</pre>";

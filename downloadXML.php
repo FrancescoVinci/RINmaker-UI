@@ -19,9 +19,9 @@ $status = [
         'pication-bond' => false,
         'pipistack-bond' => false,
         'h-bond-angle' 	=> false,
-		'pication-angle' => false,
-		'pipistack-normal-normal' => false,
-		'pipistack-normal-centre' => false
+	'pication-angle' => false,
+	'pipistack-normal-normal' => false,
+	'pipistack-normal-centre' => false
     ],
 ];
 
