@@ -67,7 +67,6 @@ $.ajax({
         
         const Graph = ForceGraph()(elem)
             .graphData(gData)
-            /*.width(1000)*/
             .nodeLabel(node => "ID : " + node.id + "<br>Res name : " + node.residue +"<br>Chain id : " + node.chain + "<br>Degree : " + node.degree)
             .linkLabel(edge => "BOND : " + edge.interaction + "<br>Atom 1 : " + edge.a1 +"<br>Atom 2 : " + edge.a2 + "<br>Distance : " + edge.distance  + "<br>Energy : " + edge.energy +" kj/mol"+"<br>source : " + edge.source.id + "<br>target : " + edge.target.id)
             .nodeColor('col_res')
@@ -97,24 +96,13 @@ $.ajax({
         Graph.d3AlphaDecay(0.02)
         Graph.d3VelocityDecay(0.7)
         Graph.enableZoomPanInteraction(true)
-
-        /*Object.prototype.getByIndex = function(index) {
-            return this[Object.keys(this)[index]];
-          };
-
-        console.log("nodes: " + Object.keys(nodesRIN).length);
-        var count=0;
-        for(var i=0 ; i<Object.keys(nodesRIN).length ; i++){
-            count += nodesRIN.getByIndex(i).degree;
-        }
-        console.log("degree avg: " + count/Object.keys(nodesRIN).length);
-        console.log("links: " + Object.keys(linksRIN).length);*/
-
-        /*if()*/
-        /*.cooldownTicks(0)*/
-
         
         const gravity = Graph.d3Force('charge'); 
+
+        var displayParmas = document.getElementById("displayParams");
+        var summaryRegExp= /params summary: {.*?}/g;
+        var summary = log.match(summaryRegExp).map(function (s) { return s; });
+        displayParmas.innerHTML = "<pre style='white-space: pre-wrap;word-wrap: break-word;text-align: justify;'>"+summary+"</pre>";
 
         var rangesliderGravity = document.getElementById("sliderGravity");
         var output1 = document.getElementById("valueG");
@@ -302,7 +290,7 @@ $.ajax({
 
         elementResizeDetectorMaker().listenTo(
             document.getElementById('content'),
-            el => Graph.width(el.offsetWidth - 100)
+            el => Graph.width(el.offsetWidth - 50)
         );
 
         function download(filename, text) {

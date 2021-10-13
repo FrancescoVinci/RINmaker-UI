@@ -63,7 +63,7 @@
                     <div class="col-sm">
                         <a>Gravity:</a>
                         <div class="rangeslider" >
-                            <input type="range" min="-200" max="0" step="2" value="0" id="sliderGravity">
+                            <input type="range" min="-150" max="50" step="2" value="0" id="sliderGravity">
                         </div>
                         <a>Value: <span id="valueG">0</span></a>
                     </div>
@@ -101,12 +101,49 @@
                 </div>
 
                 <hr>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" onclick="showhideChart()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                                    <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+                                </svg>
+                                <a id="showhideButton">Show Statistics</a>
+                            </button>
+                            <button class="btn btn-primary" onclick="showhideParams()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                                <a id="showhideButtonParams">Show Parameters</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
 
                 <div class="row">
                     <div class="col-sm">
                         <div class="d-grid gap-2">
-                            <button id="downloadXml" class="btn btn-primary" type="button">Download XML</button>
-                            <button class="btn btn-primary" type="button" onclick="redirect3dFrom2d()">3D Visualization</button>
+                            <button id="downloadXml" class="btn btn-primary" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                    <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+                                </svg>
+                                Download XML
+                            </button>
+                            <button class="btn btn-primary" type="button" onclick="redirect3dFrom2d()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-3d-fill" viewBox="0 0 16 16">
+                                    <path d="M10.157 5.968h-.844v4.06h.844c1.116 0 1.621-.667 1.621-2.02 0-1.354-.51-2.04-1.621-2.04z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm5.184 4.368c.646 0 1.055.378 1.06.9.008.537-.427.919-1.086.919-.598-.004-1.037-.325-1.068-.756H3c.03.914.791 1.688 2.153 1.688 1.24 0 2.285-.66 2.272-1.798-.013-.953-.747-1.38-1.292-1.432v-.062c.44-.07 1.125-.527 1.108-1.375-.013-.906-.8-1.57-2.053-1.565-1.31.005-2.043.734-2.074 1.67h1.103c.022-.391.383-.751.936-.751.532 0 .928.33.928.813.004.479-.383.835-.928.835h-.632v.914h.663zM8.126 11h2.189C12.125 11 13 9.893 13 7.985c0-1.894-.861-2.984-2.685-2.984H8.126V11z"/>
+                                </svg>
+                                3D Visualization
+                            </button>
+                            <a class="btn btn-primary" role="button" href="../RINmaker/index.php">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                                New Search
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -118,33 +155,16 @@
         <!-- Page Content Holder -->
         <div id="content">
 
-            <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <svg class="svg-inline--fa fa-align-justify fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-justify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-align-justify"></i> -->
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="../RINmaker/index.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../RINmaker/about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../RINmaker/help.html">Help</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <nav>
+            
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                    
             </nav>
+            <br>
 
             <div class="container" id="error"></div>
 
@@ -154,42 +174,61 @@
             </div>
 
             
-            <div id="graph" class="d-flex justify-content-center"></div>  
+            <div id="graph" class="d-flex justify-content-center border"></div>  
             
+            <br>
 
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        
-                        <div class="chart-container">
-                            <canvas id="bar-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col">
-                        
-                        <div class="chart-container">
-                            <canvas id="doughnut-chart" ></canvas>
-                        </div>
-                    </div>
+            <div id="showhideParams" class="card" style="display: none;">
+                <div class="card-header">
+                    Parameters
                 </div>
-                
-                <div class="row">
-                    <div class="col">
-                        <hr>
-                        <div class="chart-container">
-                            <canvas id="h1-chart"></canvas>
+                <div id="displayParams" class="card-body">
+                </div>
+            </div>
+
+            <br>
+
+            <div id="showhideChart" class="card" style="display: none;">
+                <div class="card-header">
+                    Statistics
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                
+                                <div class="chart-container">
+                                    <canvas id="bar-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col">
+                                
+                                <div class="chart-container">
+                                    <canvas id="doughnut-chart" ></canvas>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="col">
-                        <hr>
-                        <div class="chart-container">
-                            <canvas id="h2-chart"></canvas>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <hr>
+                                <div class="chart-container">
+                                    <canvas id="h1-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <hr>
+                                <div class="chart-container">
+                                    <canvas id="h2-chart"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            
                 
             
         </div>
@@ -209,6 +248,28 @@
                 $(this).toggleClass('active');
             });
         });
+
+        function showhideChart() {
+            var x = document.getElementById("showhideChart");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                document.getElementById("showhideButton").innerHTML = "Hide Statistics";
+            } else {
+                x.style.display = "none";
+                document.getElementById("showhideButton").innerHTML = "Show Statistics";
+            }
+        }
+
+        function showhideParams() {
+            var x = document.getElementById("showhideParams");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                document.getElementById("showhideButtonParams").innerHTML = "Hide Parameters";
+            } else {
+                x.style.display = "none";
+                document.getElementById("showhideButtonParams").innerHTML = "Show Parameters";
+            }
+        }
     </script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>

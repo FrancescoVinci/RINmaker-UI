@@ -104,6 +104,12 @@ $.ajax({
 
         const gravity = Graph.d3Force('charge'); 
 
+        var displayParmas = document.getElementById("displayParams");
+        var summaryRegExp= /params summary: {.*?}/g;
+        var summary = log.match(summaryRegExp).map(function (s) { return s; });
+        console.log(summary)
+        displayParmas.innerHTML = "<pre style='white-space: pre-wrap;word-wrap: break-word;text-align: justify;'>"+summary+"</pre>";
+
         var rangesliderGravity = document.getElementById("sliderGravity");
         var output1 = document.getElementById("valueG");
         output1.innerHTML = rangesliderGravity.value;
@@ -229,11 +235,11 @@ $.ajax({
                 var div = document.getElementById("svg");
                 div.innerHTML=`<svg width="285" height="80">
                     <g class="lgnode" transform="translate(5, 10)">
-                        <circle r="4" x="10px" fill="#f2f2f2" style="stroke-width: 0px; stroke: black;">    </circle>
+                        <circle r="4" x="10px" fill="#808080" style="stroke-width: 0px; stroke: black;">    </circle>
                         <text font-size="10" y="5px" x="10px" fill="#FFFFFF">non polar</text>
                     </g>
                     <g class="lgnode" transform="translate(75, 10)">
-                        <circle r="4" x="10px" fill="#b3b3b3" style="stroke-width: 0px; stroke: black;"></circle>
+                        <circle r="4" x="10px" fill="#00BFFF" style="stroke-width: 0px; stroke: black;"></circle>
                         <text font-size="10" y="5px" x="10px" fill="#FFFFFF">polar</text>
                     </g>
                 </svg>`;
