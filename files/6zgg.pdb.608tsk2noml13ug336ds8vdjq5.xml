@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!--{net_policy:"closest", h_bond:3.5, vdw_bond:0.5, ionic_bond:4, pication:5, pipistack:6.5, seq_sep:3, bond_control:"strict", interaction_type:"all"}-->
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	<graph id="G" edgedefault="undirected" />
+</graphml>

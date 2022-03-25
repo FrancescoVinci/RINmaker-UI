@@ -60,15 +60,15 @@ function argBuilder(params){
 }
 
 function upload(e){
-	   var files = document.getElementById("customFile").files[0];
+	var files = document.getElementById("customFile").files[0];
 
-	   var fileReader = new FileReader();
-	  	fileReader.onload = function(fileLoadedEvent){
-	    	var textFromFileLoaded = fileLoadedEvent.target.result;
-	    	localStorage.removeItem('content');
-	     	localStorage.setItem('content',textFromFileLoaded);
-		};
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileLoadedEvent){
+		var textFromFileLoaded = fileLoadedEvent.target.result;
+		localStorage.removeItem('content');
+		localStorage.setItem('content',textFromFileLoaded);
+	};
 
-		fileReader.readAsText(files, "UTF-8");
-	}
+	fileReader.readAsText(files, "UTF-8");
+}
 

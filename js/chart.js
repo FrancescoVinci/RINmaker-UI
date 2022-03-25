@@ -9,17 +9,18 @@ var bond_cols = ["#0000ff","#87cefa","#ffd700","#9C31F9","#ff0000","#9acd32","#d
 
 // Bar chart
 var ctx = document.getElementById("bar-chart");
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-    labels: res_list,
-    datasets: [
-        {
-        label: "Total",
-        backgroundColor: res_cols,
-        data: res_count
-        }
-    ]
+        labels: res_list,
+        datasets: [
+            {
+                label: "Total",
+                backgroundColor: res_cols,
+                data: res_count
+            }
+        ]
     },
     options: {
     legend: { display: false },
@@ -31,21 +32,20 @@ var myChart = new Chart(ctx, {
     maintainAspectRatio: true
     }
 });
-/*setTimeout(function() { myChart.update(); },3000);*/
 
 
 var ctx2 = document.getElementById("doughnut-chart");
 var myChart2 = new Chart(ctx2, {
     type: 'doughnut',
     data: {
-    labels: bond_list,
-    datasets: [
-        {
-        label: "Total",
-        backgroundColor: bond_cols,
-        data: bond_count
-        }
-    ]
+        labels: bond_list,
+        datasets: [
+            {
+                label: "Total",
+                backgroundColor: bond_cols,
+                data: bond_count
+            }
+        ]
     },
     options: {
     title: {
@@ -64,14 +64,14 @@ var ctx3 = document.getElementById("h1-chart");
 var myChart3 = new Chart(ctx3, {
     type: 'horizontalBar',
     data: {
-    labels: bond_list,
-    datasets: [
-        {
-        label: "AVG kj/mol: ",
-        backgroundColor: bond_cols,
-        data: avg_e_bond
-        }
-    ]
+        labels: bond_list,
+        datasets: [
+            {
+                label: "AVG kj/mol: ",
+                backgroundColor: bond_cols,
+                data: avg_e_bond
+            }
+        ]
     },
     options: {
         scales: {

@@ -17,7 +17,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style2.css">
-    
 </head>
 
 <body>
@@ -72,15 +71,10 @@
                                 Help
                             </a>
                         </li>
-
                     </ul>
                 </div>
-
-                
             </div>
-
         </nav>
-
 
         <!-- Page Content Holder -->
         <div id="content">
@@ -132,7 +126,6 @@
                         <hr class="my-4">
                         <div class="row">
                             <div class="col-sm">
-
                                 <p><mark>Bond Control</mark></p>
                                 <div class="input-group mb-3">
                                     <select id="bond-control" name="bond-control" class="form-select" >
@@ -140,7 +133,6 @@
                                     <option>weak</option>
                                     </select>
                                 </div>
-
                             </div>
                             <div class="col-sm">
 
@@ -168,9 +160,7 @@
                         </div>  
                         <br>
                         <div class="row">
-
                             <div class="col-sm">
-
                                 <p><mark>Sequence Separation</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -178,10 +168,8 @@
                                     </div>
                                     <input id="seq-sep-num" name="seq-sep-num" type="text" class="form-control" placeholder="UINT=3">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>Hydrogen bond</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -189,10 +177,8 @@
                                     </div>
                                     <input id="h-bond-num" name="h-bond-num" type="text" class="form-control" placeholder="FLOAT=3.5" >
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>Van Der Waals bond</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -201,13 +187,10 @@
                                     <input id="vdw-bond-num" name="vdw-bond-num" type="text" class="form-control" placeholder="FLOAT=0.5">
                                 </div>
                             </div>
-
                         </div>
                         <br>
                         <div class="row">
-
                             <div class="col-sm">
-
                                 <p><mark>Ionic bond</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -215,10 +198,8 @@
                                     </div>
                                     <input id="ionic-bond-num" name="ionic-bond-num" type="text" class="form-control" placeholder="FLOAT=4">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>Generic bond</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -226,10 +207,8 @@
                                     </div>
                                     <input id="generic-bond-num" name="generic-bond-num" type="text" class="form-control" placeholder="FLOAT=6">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>&#960-cation interaction</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -237,13 +216,11 @@
                                     </div>
                                     <input id="pication-bond-num" name="pication-bond-num" type="text" class="form-control" placeholder="FLOAT=5">
                                 </div>
-
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-sm">
-
                                 <p><mark>&#960-&#960 stacking</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -251,10 +228,8 @@
                                     </div>
                                     <input id="pipistack-bond-num" name="pipistack-bond-num" type="text" class="form-control" placeholder="FLOAT=6.5">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                             <p><mark>Hydrogen bond angle</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -262,10 +237,8 @@
                                     </div>
                                     <input id="h-bond-angle-num" name="h-bond-angle-num" type="text" class="form-control" placeholder="FLOAT=63">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>&#960-cation angle</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -273,13 +246,11 @@
                                     </div>
                                     <input id="pication-angle-num" name="pication-angle-num" type="text" class="form-control" placeholder="FLOAT=45">
                                 </div>
-
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-sm">
-
                                 <p><mark>&#960-&#960 stacking-normal-normal</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -287,10 +258,8 @@
                                     </div>
                                     <input id="pipistack-normal-normal-num" name="pipistack-normal-normal-num" type="text" class="form-control" placeholder="FLOAT=90">
                                 </div>
-
                             </div>
                             <div class="col-sm">
-
                                 <p><mark>&#960-&#960 stacking-normal-centre</mark></p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-text">
@@ -303,7 +272,6 @@
                     </div>
                     <br>
                     <div class="row text-center">
-
                         <input type="hidden" id="upcontent" name="upcontent" value="">
 
                         <div class="col-sm">
@@ -320,7 +288,6 @@
                         </div>
 
                         <div id="result"></div>
-
                     </div>
                 </form>
                 <br>
@@ -330,11 +297,13 @@
                     if(isset($_GET['err-send'])){
                         if($_GET['err-send'] == true){
                             echo '
-                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                &nbsp; Insert only a .pdb file in the form
+                            <div class="container">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                    &nbsp; Insert only a .pdb file in the form
+                                </div>
                             </div>
                             ';
                         }
@@ -344,11 +313,13 @@
                     if(isset($_GET['err-not-found'])){
                         if($_GET['err-not-found'] == true){
                             echo '
-                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                                </svg>
-                                &nbsp; The specified pdb file does not exist
+                            <div class="container">
+                                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                    </svg>
+                                    &nbsp; The specified pdb file does not exist
+                                </div>
                             </div>
                             ';
                         }
@@ -357,11 +328,13 @@
                     if(isset($_GET['err-int-err'])){
                         if($_GET['err-int-err'] == true){
                             echo '
-                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                &nbsp; Internal error. The service is temporarily not working, try again later
+                            <div class="container">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                    &nbsp; Internal error. The service is temporarily not working, try again later
+                                </div>
                             </div>
                             ';
                         }
@@ -370,11 +343,13 @@
                     if(isset($_GET['err-bad-request'])){
                         if($_GET['err-bad-request'] == true){
                             echo '
-                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                &nbsp; Bad Request. Incorrect value, please check that all parameters respect the constraints. For more info visit the Help page
+                            <div class="container">
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                    &nbsp; Bad Request. Incorrect value, please check that all parameters respect the constraints. For more info visit the Help page
+                                </div>
                             </div>
                             ';
                         }
@@ -383,13 +358,14 @@
                     if(isset($_GET['msg-succ'])){
                         if($_GET['msg-succ'] == true){
                             echo '
-                            <div class="alert alert-success d-flex align-items-center" role="alert">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                </svg>
-                                &nbsp; Completed successfully
+                            <div class="container">
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                    </svg>
+                                    &nbsp; Completed successfully
+                                </div>
                             </div>
-                            
                             ';
                         }
                     }
@@ -428,7 +404,6 @@ echo "Bad Request";
 }
 ?>
                         </pre>
-          
                     </div>
                 </div>
             </div>
@@ -436,22 +411,21 @@ echo "Bad Request";
             <?php
             if(isset($_GET['filename'])){
                 $file = $_GET['filename'];
-                echo '
+                echo "
                 <div class=container>
                     <a href= files/$file  download>
-                    <button type=button class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
-                            <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+                    <button type='button' class='btn btn-primary'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-cloud-arrow-down-fill' viewBox='0 0 16 16'>
+                            <path d='M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z'/>
                         </svg>
                         Download XML
                     </button>
                     </a>
                 </div>
-                ';
+                ";
             }
             ?>
             <br>
-        
         </div>
     </div>
 
