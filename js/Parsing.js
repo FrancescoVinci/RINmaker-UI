@@ -10,7 +10,11 @@ export var bond_count = new Array(7) //idem per i legami
 export var avg_e_bond = new Array(7)
 export var avg_dist_bond = new Array(7)
 export var map = {}
+export var hbond_ext_count = new Array(4); // [0]=MC_MC [1]=SC_SC [2]=MC_SC [3]=SC_MC
 
+for(var index=0; index < hbond_ext_count.length; index++){ //inizzializzo l'array a 0
+    hbond_ext_count[index] = 0
+}
 for (var index = 0; index < (res_count.length); index++){ //forzo l'inizializzazione a 0 poichè altrimenti js fa quello che vuole
     res_count[index] = 0;
 }
@@ -652,6 +656,7 @@ export function parseXmlBonds( text ){
                     //e_Distance
                 
                 var interaction
+                 
                 if (data[1].childNodes[0])
                     //interaction = data[1].childNodes[0].data;  //e_Interaction
                     interaction = xmledges[i].querySelector("data[key=e_Interaction]").innerHTML;  //e_Interaction
@@ -672,8 +677,20 @@ export function parseXmlBonds( text ){
                     intType = interaction;
                 else {
                     intExt = interaction.substring(index + 1); //MC_MC,SC_MC ecc
-                // subtypenode_subtypenode, where subtype = main chain (MC), side chain (SC) and ligand (LIG).
+                    // subtypenode_subtypenode, where subtype = main chain (MC), side chain (SC) and ligand (LIG).
                     intType = interaction.substring(0,index); 
+
+                    if(intType == 'HBOND'){
+                        if(intExt == 'MC_MC'){
+                            hbond_ext_count[0]++;
+                        } else if(intExt  == 'SC_SC'){
+                            hbond_ext_count[1]++;
+                        } else if(intExt  == 'MC_SC'){
+                            hbond_ext_count[2]++;
+                        } else if(intExt  == 'SC_MC'){
+                            hbond_ext_count[3]++;
+                        }
+                    }
                     
                 if ( !intType || !interaction || !intExt ){
                     console.log("found!");
@@ -876,6 +893,17 @@ export function parseXmlBonds( text ){
                 serial++;   
                  
             }
+
+            var total = 0;
+            for(let i=0; i<hbond_ext_count.length; i++){
+                total += hbond_ext_count[i];
+            }
+
+            for(let i=0; i<hbond_ext_count.length; i++){
+                hbond_ext_count[i] = ((100 * hbond_ext_count[i]) / total).toFixed(2);
+            }
+            
+
 
             const roundAccurately = (number, decimalPlaces) => Number(Math.round(number + "e" + decimalPlaces) + "e-" + decimalPlaces)
             for (var i = 0; i < (bond_count.length); ++i){

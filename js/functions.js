@@ -1,14 +1,107 @@
 
-function redirectXML(){
+
+function download(filename, text) {
+	var element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	element.setAttribute('download', filename);
+
+	element.style.display = 'none';
+	document.body.appendChild(element);
+
+	element.click();
+
+	document.body.removeChild(element);
+}
+
+$('#loading').hide();
+
+async function redirectXML(e) {
+	
 	form=document.getElementById("form1");
 	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle()){
-		form.action='downloadXML.php'; 
-		form.submit();
+		$('#loading').show();
+		$('#download').hide();
 		
-		return true;
+		var params = {};
+		if(document.getElementById('customFile').value !== ""){
+			await upload(e);
+		}
+		argBuilder(params);
+		eraseCookie('params2D');
+		//setCookie('params2D', JSON.stringify(params),1);
+		//window.open('index2D.html','_self');
+		const regexpPDB = /^[\w\-_\s]+.pdb$/;
+
+		var url;
+		var pdbname = params.pdbname;
+		var urlFromContent = "https://ring.dais.unive.it:8002/api/requestxml/fromcontent";
+		var urlFromName = "https://ring.dais.unive.it:8002/api/requestxml/fromname";
+
+		if(!params.pdbname.match(regexpPDB)){
+			params.pdbname = params.pdbname + '.pdb';
+			pdbname = params.pdbname;
+		}
+
+		if(params.hasOwnProperty('fromname')){
+			url = urlFromName;
+			delete params.fromname;
+		}else if(params.hasOwnProperty('fromcontent')){
+			url = urlFromContent;
+			params.content = localStorage.getItem('content');
+			delete params.fromcontent;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: params,
+			async: 'false',
+			success: function(res) {
+				$('#loading').hide();
+				$('#download').show();
+				var log = res.data.log;
+				var xml =  res.data.xml;
+				document.getElementById("downloadXml").style.display = "block";
+				document.getElementById("success").style.display= "block";
+				
+				document.getElementById("log").innerHTML = "Log: " + pdbname;
+				document.getElementById("log-info").innerHTML = log;
+
+				
+				var element = document.getElementById("downloadXml");
+				var new_element = element.cloneNode(true);
+				element.parentNode.replaceChild(new_element, element);
+				new_element.addEventListener("click", function(){
+					download(pdbname.slice(0, -4) + ".xml", xml);
+				}, false);
+
+
+			},
+			error: function(xhr, status, error){
+				$('#loading').hide();
+				$('#download').show();
+				if(xhr.responseJSON.response === "error"){
+					if(xhr.responseJSON.error.code === 404){
+						document.getElementById("not-exist").style.display= "block";
+						document.getElementById("log").innerHTML = "Log: " + pdbname;
+						document.getElementById("log-info").innerHTML = "Not Found";
+					}else if(xhr.responseJSON.error.code == 400){
+						document.getElementById("bad-request").style.display= "block";
+						document.getElementById("log").innerHTML = "Log: " + pdbname;
+						document.getElementById("log-info").innerHTML = "Bad Request";
+					}else if(xhr.responseJSON.error.code == 500){
+						document.getElementById("int-err").style.display= "block";
+						document.getElementById("log").innerHTML = "Log: " + pdbname;
+						document.getElementById("log-info").innerHTML = "Internal Error";
+					}  
+					
+				}    
+			}
+		});
 	}
-	return false;
 }
+
+
 
 function load(){
 	$('#download').hide();
@@ -19,6 +112,7 @@ function load(){
 			</button>
 	`);
 }
+
 
 function redirect2d(e){
 	if(emptyField() && isNumber() && isUnsignedInteger() && checkAngle()){
